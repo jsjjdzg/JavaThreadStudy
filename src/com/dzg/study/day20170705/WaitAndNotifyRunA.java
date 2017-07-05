@@ -4,6 +4,16 @@ public class WaitAndNotifyRunA {
 
 	public static void main(String[] args) {
 		Object lock = new Object();
+		WaitThreadA a = new WaitThreadA(lock);
+		a.start();
+		NotifyThreadA b = new NotifyThreadA(lock);
+		b.start();
+		NotifyThreadB c = new NotifyThreadB(lock);
+		c.start();
+	}
+	
+	public static void mainA(String[] args) {
+		Object lock = new Object();
 		WaitThreadA a1 = new WaitThreadA(lock);
 		a1.setName("A");
 		a1.start();

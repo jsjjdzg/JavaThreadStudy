@@ -22,11 +22,11 @@ public class NotifyThreadA extends Thread{
 	public void run(){
 		try {
 			synchronized(lock){
-				System.out.println("开始通知");
-				Thread.sleep(3000);
-				//lock.notify(); // 随机挑选一个wait线程
-				lock.notifyAll(); // 所有该lock的wait线程都收到通知
-				System.out.println("结束通知");
+				System.out.println(Thread.currentThread().getName() + "开始通知");
+				Thread.sleep(5000);
+				lock.notify(); // 随机挑选一个wait线程
+				//lock.notifyAll(); // 所有该lock的wait线程都收到通知
+				System.out.println(Thread.currentThread().getName() + "结束通知");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
