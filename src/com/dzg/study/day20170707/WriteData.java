@@ -1,4 +1,4 @@
-package com.dzg.study.day20170706;
+package com.dzg.study.day20170707;
 
 import java.io.PipedOutputStream;
 
@@ -19,6 +19,7 @@ public class WriteData {
 				out.write(b.getBytes());
 				System.out.print(b);
 			}
+			System.out.println();
 			System.out.println("写入完毕");
 			out.close();
 		} catch (Exception e) {

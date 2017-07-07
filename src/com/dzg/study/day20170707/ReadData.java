@@ -1,4 +1,4 @@
-package com.dzg.study.day20170706;
+package com.dzg.study.day20170707;
 
 import java.io.PipedInputStream;
 
@@ -14,13 +14,14 @@ public class ReadData {
 	public void readData(PipedInputStream in) {
 		try {
 			System.out.println("开始读取");
-			byte[] readArray = new byte[100];
-			int length = in.read(readArray);
+			byte[] byteArray = new byte[200];
+			int length = in.read(byteArray); // 若是没有数据会被一直阻塞，直到有数据为止
 			while (length != -1) {
-				String newData = new String(readArray, 0, length);
+				String newData = new String(byteArray, 0, length);
 				System.out.print(newData);
-				length = in.read(readArray);
+				length = in.read(byteArray);
 			}
+			System.out.println();
 			System.out.println("读取完毕");
 			in.close();
 		} catch (Exception e) {
