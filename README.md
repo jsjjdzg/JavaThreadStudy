@@ -1,9 +1,10 @@
 # JavaThreadStudy
-Java多线程学习
 
----
+<p align ="center">
+    <img src ="https://i.ooxx.ooo/2017/07/10/415868bbab3386c43d5aa104273fc959.jpg" alt ="DZG JavaThreadStudy" width ="300">
+</p>
 
-### 笔记内容:
+#### 该系列是多线程学习的代码和笔记区域：
 
 [Java多线程(简单带过)](http://note.youdao.com/noteshare?id=5781199fcea6409e4715608a78063d80&sub=0E6A1C7BFF914B7D830E6FC8B6F6AD50)		
 
